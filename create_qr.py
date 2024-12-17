@@ -20,7 +20,7 @@ def index():
         
         return send_file(img_io, mimetype='image/png', as_attachment=False, download_name='codigo_qr.png')
     
-    return render_template('index.html')
+    return render_template('/index.html')
 
 if __name__ == '__main__':
     app.run(debug=False)
