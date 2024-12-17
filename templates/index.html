@@ -29,6 +29,11 @@
                  (adsbygoogle = window.adsbygoogle || []).push({});
             </script>
         </div>-->
+    <div class="text-right">
+        <button class="btn btn-primary" onclick="showEmail()">Contacto</button>
+    </div>
+    <div id="contactMessage" style=" margin-top: 10px; display:none; transition: opacity 0.5s; opacity: 0; color: black; font-size: 1.2rem;"></div>
+
     </div>
     <br>
     <div class="container features d-flex justify-content-between">
@@ -44,6 +49,7 @@
         <img src="static/img/qrgenerate.png" alt="Ilustración de características" class="img-fluid">
     </div>
 
+
     <div class="container qr-form">
         <form id="qrForm" class="bg-white p-4 rounded shadow">
             <div class="form-group">
@@ -58,19 +64,26 @@
 
 
 
-    <div class="container contact">
-        <h2>Contacto</h2>
-        <p>Si tienes alguna pregunta, no dudes en <a href="mailto:mauricioberisvil06@gmail.com">contactarnos</a>.</p>
-    </div>
-
     <div id="qrResult" class="container qr-result text-center"></div>
 
-    <div class="footer">
+    <div class="footer" style="font-size: 0.8em; padding: 10px 0; text-align: center;">
         <p>&copy; 2023 Generador de Código QR. Todos los derechos reservados.</p>
-        <p>Desarrollado por Mauricio Berisvil</p>
+        <p>Desarrollado por <a style="text-decoration: none; color: black;" href="https://berisvilmauricio.ar" target="_blank">Mauricio Berisvil</a></p>
     </div>
 
 
+
+
+    <script>
+        function showEmail() {
+            const contactMessage = document.getElementById('contactMessage');
+            contactMessage.innerHTML = 'Email: mauricioberisvil06@gmail.com';
+            contactMessage.style.display = 'block';
+            setTimeout(() => {
+                contactMessage.style.opacity = 1;
+            }, 10); // Pequeño retraso para permitir que el display se aplique
+        }
+    </script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
