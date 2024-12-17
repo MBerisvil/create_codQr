@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Código QR</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+
+
+</head>
+<body>
+    <div class="hero">
+        <h1>Generador de Código QR</h1>
+        <p>Transforma cualquier enlace en un código QR de forma rápida y sencilla.</p>
+        <p class="lead">¡Prueba nuestra herramienta gratuita y mejora tu marketing!</p>
+        
+        <!-- Aquí puedes agregar el código de anuncio 
+        <div class="text-center">
+            <ins class="adsbygoogle"
+                 style="display:block; margin: 20px auto;"
+                 data-ad-client="ca-pub-XXXXXXXXXX" -- Reemplaza con tu ID de cliente --
+                 data-ad-slot="XXXXXXXXXX" !-- Reemplaza con tu ID de anuncio --
+                 data-ad-format="auto"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>-->
+    </div>
+    <br>
+    <div class="container features d-flex justify-content-between">
+        <div>
+            <h2>Características</h2>
+            <ul>
+                <li>Generación rápida de códigos QR.</li>
+                <li>Compatible con múltiples tipos de enlaces.</li>
+                <li>Interfaz fácil de usar.</li>
+                <li>Descarga instantánea del código QR generado.</li>
+            </ul>
+        </div>
+        <img src="static/img/qrgenerate.png" alt="Ilustración de características" class="img-fluid">
+    </div>
+
+    <div class="container qr-form">
+        <form id="qrForm" class="bg-white p-4 rounded shadow">
+            <div class="form-group">
+                <label for="data" class="h4">Ingrese los datos:</label>
+                <input type="text" class="form-control" id="data" placeholder="Ejemplo: https://www.ejemplo.com" required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Generar Código QR</button>
+        </form>
+    </div>
+
+    <div id="qrResult" class="container qr-result text-center"></div>
+
+
+
+    <div class="container contact">
+        <h2>Contacto</h2>
+        <p>Si tienes alguna pregunta, no dudes en <a href="mailto:mauricioberisvil06@gmail.com">contactarnos</a>.</p>
+    </div>
+
+    <div id="qrResult" class="container qr-result text-center"></div>
+
+    <div class="footer">
+        <p>&copy; 2023 Generador de Código QR. Todos los derechos reservados.</p>
+        <p>Desarrollado por Mauricio Berisvil</p>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+</body>
+</html>
