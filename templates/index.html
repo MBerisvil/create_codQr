@@ -36,9 +36,10 @@
 
     </div>
     <br>
-    <div class="container features d-flex justify-content-between">
-        <div>
-            <h2>Características</h2>
+
+    <div class="container features d-flex flex-column flex-md-row justify-content-between">
+        <div class="mb-4 mb-md-0" style="animation: fadeIn 2s;">
+            <h2 style="color: #65a237;">Características</h2>
             <ul>
                 <li>Generación rápida de códigos QR.</li>
                 <li>Compatible con múltiples tipos de enlaces.</li>
@@ -50,21 +51,24 @@
     </div>
 
 
-    <div class="container qr-form">
-        <form id="qrForm" class="bg-white p-4 rounded shadow">
-            <div class="form-group">
-                <label for="data" class="h4">Ingrese los datos:</label>
-                <input type="text" class="form-control" id="data" placeholder="Ejemplo: https://www.ejemplo.com" required>
+    <div class="container" style="border: none;">
+        <div class="card qr-form" style="border: none; background-color: transparent;">
+            <h4 class="card-header" style="border: none; background-color: transparent;">Ingresar datos</h4>
+            <div class="card-body">
+                <form id="qrForm" class="bg-white p-4 rounded shadow">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="data" placeholder="Ejemplo: https://www.ejemplo.com o vCard" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Generar Código QR</button>
+                </form>
             </div>
-            <button type="submit" class="btn btn-primary btn-block">Generar Código QR</button>
-        </form>
+        </div>
+
+        <div id="qrResult" class="container qr-result text-center"></div>
     </div>
 
-    <div id="qrResult" class="container qr-result text-center"></div>
 
-
-
-    <div id="qrResult" class="container qr-result text-center"></div>
+    
 
     <div class="footer" style="font-size: 0.8em; padding: 10px 0; text-align: center;">
         <p>&copy; 2023 Generador de Código QR. Todos los derechos reservados.</p>
