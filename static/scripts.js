@@ -36,9 +36,9 @@ document.getElementById('qrForm').addEventListener('submit', function(event) {
         document.getElementById('qrResult').appendChild(downloadLink);
         
         // Crear botón para compartir
-        const shareButton = document.createElement('button');
-        shareButton.innerText = 'Compartir Código QR';
-        shareButton.className = 'btn btn-info mt-2 ml-2';
+        //const shareButton = document.createElement('button');
+        //shareButton.innerText = 'Compartir Código QR';
+        //shareButton.className = 'btn btn-info mt-2 ml-2';
         shareButton.addEventListener('click', function() {
             if (navigator.share) {
                 navigator.share({
